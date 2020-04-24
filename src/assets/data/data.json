@@ -9,19 +9,23 @@
             "title": "Introduccion al mundo Konecta",
             "status":true,
             "unidad": [
-                {
+                {   "title":"VIVEKONECTA",
                     "video": "",
                     "time": 30,
+                    "status":true,
                     "test": [
                         {
                             "title": "Test1",
-                            "img": "1.png",
-                            "minute": 3,
-                            "status":true                       },
+                            "img": "2.png",
+                            "time": 3,
+                            "porcent":0,
+                            "status":true                       
+                        },
                         {
                             "num": "Test2",
-                            "img": "1.png",
-                            "name": 3,
+                            "img": "2.png",
+                            "time": 3,
+                            "porcent":0,
                             "status":true
                         }
                     ]
@@ -39,32 +43,39 @@
             "unidad": [
                 {
                     "id": 1,
+                    "title":"PACIFICO SEGUROS I",
                     "video": "",
                     "time": 30,
+                    "status":true,
                     "test": [
                         {
                             "title": "Test1",
                             "img": "2.png",
-                            "minute": 3,
+                            "time": 3,
+                            "porcent":0,
                             "status":true
                         }
                     ]
                 },
                 {
                     "id": 2,
+                    "title":"PACIFICO SEGUROS II",
                     "video": "",
                     "time": 60,
+                    "status":true,
                     "test": [
                         {
                             "title": "Test1",
                             "img": "2.png",
-                            "minute": 3,
+                            "time": 3,
+                            "porcent":0,
                             "status":true
                         },
                         {
                             "num": "Test2",
                             "img": "2.png",
-                            "name": 3,
+                            "time": 3,
+                            "porcent":0,
                             "status":true
                         }
                     ]
