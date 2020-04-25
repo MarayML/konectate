@@ -1,26 +1,21 @@
 <template>
-  <v-app-bar app color="white" dark>
-    <div class="d-flex align-center">
+ <v-app-bar app color="white">
+    <div class="d-flex flex-row">
       <v-img
         alt="Vuetify Logo"
-        class="shrink mr-2"
         contain
         src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
         transition="scale-transition"
         width="40"
       />
-
-      <h4 class="black--text">Formacion Konecta</h4>
+     <h4 class="black--text headline font-weight-medium mt-2 ml-2">Formacion Konecta</h4>
     </div>
-
     <v-spacer></v-spacer>
     <div>
       <v-tabs
         background-color="white"
-        color="grey"
         slider-color="cyan"
         active-class="black--text"
-        dark
       >
         <v-tab class="grey--text">Inicio</v-tab>
         <v-tab class="grey--text">Cursos</v-tab>
@@ -29,7 +24,7 @@
     </div>
 
     <div class="d-flex align-center">
-      <h4 class="black--text">Mari Cuevas</h4>
+      <h4 class="cyan--text font-weight-medium">Mari Cuevas</h4>
       <v-img
         alt="perfil"
         class="shrink mr-2"
@@ -39,7 +34,6 @@
         width="40"
       />
     </div>
-
   </v-app-bar>
 </template>
 

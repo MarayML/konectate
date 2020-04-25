@@ -1,17 +1,19 @@
 <template>
-  <v-container class="d-flex">
-    <h2>{{data.cursos[index].title}}</h2>
-    <div>
-      <v-icon>fa fa-graduation-cap</v-icon>
-      {{data.cursos[index].unidad.length}} Unidad
-    </div>
-    <div>
-      <v-icon>fa fa-pencil-alt</v-icon>
-      {{getTest()}} Test
-    </div>
-    <div>
-      <v-icon>fa fa-youtube"</v-icon>
-      {{getTime()}} Minutos
+  <v-container class="subtitle-1">
+    <h2 class="black--text">{{data.cursos[index].title}}</h2>
+    <div class="d-flex mt-3 justify-space-between">
+      <div>
+        <v-icon class="teal--text">fa fa-graduation-cap</v-icon>
+        <b class="ml-1">{{data.cursos[index].unidad.length}} Unidad</b>
+      </div>
+      <div class="ml-2">
+        <v-icon class="teal--text">fa fa-pencil</v-icon>
+        <b class="ml-1">{{getTest()}} Test</b>
+      </div>
+      <div class="ml-2">
+        <v-icon class="teal--text">fa fa-youtube-play</v-icon>
+        <b class="ml-1">{{getTime()}} Minutos</b>
+      </div>
     </div>
   </v-container>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-app>
     <navBar />
     <v-content>
       <v-container fluid>
@@ -16,7 +16,7 @@
                 :unidad="true"
                 :time="itemUnidad.time"
                 :indexUnidad="indiceUnidad"
-                :indexTest = "-1"
+                :indexTest="-1"
               ></subCard>
             </v-col>
           </v-row>
@@ -40,9 +40,12 @@
             </v-col>
           </v-row>
         </div>
+              <v-btn class="ma-2" outlined color="indigo" @click="goBack()">Atras</v-btn>
+
       </v-container>
+      {{this.data.cursos[0].unidad[0].porcent}}
     </v-content>
-  </v-container>
+  </v-app>
 </template>
 
 
@@ -71,6 +74,9 @@ export default {
     getIndex() {
       return parseInt(sessionStorage.getItem("index"));
     },
+    goBack() {
+      this.$router.push({ name: "Home" });
+    }
   }
 };
 </script>

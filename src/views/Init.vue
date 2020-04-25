@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-app>
     <h2>{{title}}</h2>
     <h6>{{totalTime}}</h6>
     <v-row>
@@ -14,7 +14,7 @@
       </v-col>
       <v-btn class="ma-2" outlined color="sucess" @click="finish()">Terminar</v-btn>
     </v-row>
-  </v-container>
+  </v-app>
 </template>
 
 
@@ -40,25 +40,31 @@ export default {
   methods: {
     finish() {
       clearInterval(this.counterInterval);
-      const array = this.data.cursos[this.indexCurso].unidad[this.indexUnidad]
-      if (((this.time >= (this.totalTime * 60) + 60)) && (this.time < (this.totalTime * 60) + 120)) {
-        if (unidad) {
-          array.porcent = 50;          
+     const array = this.data.cursos[this.indexCurso].unidad[this.indexUnidad]
+    //  if (((this.time >= (this.totalTime * 60) + 60)) && (this.time < (this.totalTime * 60) + 120)) {
+        if (this.unidad) {
+          this.data.cursos[this.indexCurso].unidad[this.indexUnidad].porcent = 50;    
+          console.log('50'); 
+          console.log(this.data.cursos[this.indexCurso].unidad[this.indexUnidad].porcent);            
         } else {
-          array.test[this.indexTest] = 50;          
+          array.test[this.indexTest].porcent = 50;          
         }
-      } else if ((this.time >= (this.totalTime * 60) + 120)) {
-        if (unidad) {
-          array.porcent = 50;          
-        } else {
-          array.test[this.indexTest] = 50;          
+   /*   } else if ((this.time >= (this.totalTime * 60) + 120)) {
+        if (this.unidad) {
+          array.porcent = 100;    
+          console.log('100');   
+          console.log(array.porcent);            
+       } else {
+          array.test[this.indexTest].porcent = 100;          
         }
-      }
+     }*/
       console.log(this.time);
       this.$router.push({ name: "Cursos" });
     }
   },
   created: function() {
+        console.log(this.data.cursos[0].imga);
+
     const array = this.data.cursos[this.indexCurso].unidad[this.indexUnidad];
     if (this.indexTest === -1) {
       this.unidad = true;

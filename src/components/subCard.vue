@@ -3,7 +3,7 @@
     <v-img class="white--text align-end" height="200px" :src="require(`@/assets/img/${img}`)">
       <v-card-title class="black--text">{{autor}}</v-card-title>
     </v-img>
-    <v-progress-linear color="amber" height="25" reactive>{{}}%</v-progress-linear>
+    <v-progress-linear color="amber" height="25" reactive>{{porcent}}%</v-progress-linear>
     <v-card-subtitle class="pb-0">{{title}}</v-card-subtitle>
     <v-card-subtitle class="pb-0">
       <div v-if="unidad">
@@ -31,7 +31,7 @@ export default {
     img: String,
     autor: String,
     imga: String,
-    porcent: String,
+    porcent: Number,
     title: String,
     unidad: Boolean,
     time: Number,
