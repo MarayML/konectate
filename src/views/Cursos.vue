@@ -16,6 +16,7 @@
                 :unidad="true"
                 :time="itemUnidad.time"
                 :indexUnidad="indiceUnidad"
+                :indexTest = "-1"
               ></subCard>
             </v-col>
           </v-row>

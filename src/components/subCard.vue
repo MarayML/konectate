@@ -40,8 +40,8 @@ export default {
   },
   methods: {    
     goVideo() {
-      sessionStorage.setItem("indiceUnidad", this.indexUnidad);
-      sessionStorage.setItem("indiceTest", this.indexTest);
+      sessionStorage.setItem("indexUnidad", this.indexUnidad);
+      sessionStorage.setItem("indexTest", this.indexTest);
       this.$router.push({ name: "Init" });
     }
   }

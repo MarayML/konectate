@@ -10,20 +10,23 @@
             "status":true,
             "unidad": [
                 {   "title":"VIVEKONECTA",
-                    "video": "",
-                    "time": 30,
+                    "video": "https://www.youtube.com/embed/aMwtWIDTE5w",
+                    "porcent":0,
+                    "time": 2,
                     "status":true,
                     "test": [
                         {
                             "title": "Test1",
                             "img": "2.png",
-                            "time": 3,
+                            "video": "https://www.youtube.com/embed/Kp9FyMnd6Ec",
+                            "time": 2,
                             "porcent":0,
                             "status":true                       
                         },
                         {
                             "num": "Test2",
                             "img": "2.png",
+                            "video": "https://www.youtube.com/embed/e7GzbY5SGCs",
                             "time": 3,
                             "porcent":0,
                             "status":true
