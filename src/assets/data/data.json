@@ -16,16 +16,16 @@
                     "status":true,
                     "test": [
                         {
-                            "title": "Test1",
-                            "img": "2.png",
+                            "title": "Test-1",
+                            "img": "2.jpg",
                             "video": "https://www.youtube.com/embed/Kp9FyMnd6Ec",
                             "time": 2,
                             "porcent":0,
                             "status":true                       
                         },
                         {
-                            "num": "Test2",
-                            "img": "2.png",
+                            "title": "Test-2",
+                            "img": "3.jpg",
                             "video": "https://www.youtube.com/embed/e7GzbY5SGCs",
                             "time": 3,
                             "porcent":0,
@@ -47,15 +47,24 @@
                 {
                     "id": 1,
                     "title":"PACIFICO SEGUROS I",
-                    "video": "",
+                    "video": "https://www.youtube.com/embed/9wgDlkvx6f4",
                     "time": 30,
                     "porcent":0,
                     "status":true,
                     "test": [
                         {
-                            "title": "Test1",
-                            "img": "2.png",
-                            "time": 3,
+                            "title": "Test-1",
+                            "img": "4.png",
+                            "video":"https://www.youtube.com/embed/gyeKb1C5Uuc",
+                            "time": 2,
+                            "porcent":100,
+                            "status":false
+                        },
+                        {
+                            "title": "Test-2",
+                            "img": "5.jpg",
+                            "video":"https://www.youtube.com/embed/gyeKb1C5Uuc",
+                            "time": 2,
                             "porcent":0,
                             "status":true
                         }
@@ -64,23 +73,25 @@
                 {
                     "id": 2,
                     "title":"PACIFICO SEGUROS II",
-                    "video": "",
+                    "video": "https://www.youtube.com/embed/4LsrUg2xU5c",
                     "time": 60,
                     "porcent":0,
                     "status":true,
                     "test": [
                         {
-                            "title": "Test1",
-                            "img": "2.png",
+                            "title": "Test-1",
+                            "img": "5.png",
+                            "video":"https://www.youtube.com/embed/iW2mmtcsYIY",
                             "time": 3,
-                            "porcent":50,
+                            "porcent":0,
                             "status":true
                         },
                         {
-                            "num": "Test2",
-                            "img": "2.png",
+                            "title": "Test-2",
+                            "img": "3.jpg",
+                            "video":"https://www.youtube.com/embed/iW2mmtcsYIY",
                             "time": 3,
-                            "porcent":50,
+                            "porcent":0,
                             "status":true
                         }
                     ]

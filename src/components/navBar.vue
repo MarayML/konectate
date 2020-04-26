@@ -4,7 +4,7 @@
       <v-img
         alt="Vuetify Logo"
         contain
-        src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+        src="../assets/img/logo.png"
         transition="scale-transition"
         width="40"
       />
@@ -17,8 +17,8 @@
         slider-color="cyan"
         active-class="black--text"
       >
-        <v-tab class="grey--text">Inicio</v-tab>
-        <v-tab class="grey--text">Cursos</v-tab>
+        <v-tab class="grey--text" >Inicio</v-tab>
+        <v-tab class="grey--text" >Cursos</v-tab>
         <v-tab class="grey--text">Foro</v-tab>
       </v-tabs>
     </div>
@@ -29,7 +29,7 @@
         alt="perfil"
         class="shrink mr-2"
         contain
-        src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+        src="../assets/img/perfil3.jpg"
         transition="scale-transition"
         width="40"
       />

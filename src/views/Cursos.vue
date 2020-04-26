@@ -3,10 +3,13 @@
     <navBar />
     <v-content>
       <v-container fluid>
-        <unidad :index="index"></unidad>
+        <div class="title">
+          <unidad :index="index"></unidad>
+        </div>
         <div v-for="(itemUnidad, indiceUnidad) in data.cursos[index].unidad" :key="indiceUnidad">
-          <v-row dense>
+          <v-row class="mt-10" dense>
             <v-col cols="12">
+            <h4 class="d-flex justify-center mb-5 display-1">Unidad: {{indiceUnidad+1}}</h4> 
               <subCard
                 :img="data.cursos[index].img"
                 :autor="data.cursos[index].autor"
@@ -15,12 +18,16 @@
                 :title="itemUnidad.title"
                 :unidad="true"
                 :time="itemUnidad.time"
+                :status="itemUnidad.status"
                 :indexUnidad="indiceUnidad"
                 :indexTest="-1"
               ></subCard>
             </v-col>
           </v-row>
-          <v-row dense>
+          <div class="d-flex justify-center">
+            <div class="border"></div>
+          </div>
+          <v-row dense class="mt-5">
             <v-col
               v-for="(item, indice) in data.cursos[index].unidad[indiceUnidad].test"
               :key="indice"
@@ -34,16 +41,18 @@
                 :title="item.title"
                 :unidad="false"
                 :time="item.time"
+                :status="item.status"
                 :indexUnidad="indiceUnidad"
                 :indexTest="indice"
               ></subCard>
             </v-col>
-          </v-row>
+          </v-row>          
         </div>
-              <v-btn class="ma-2" outlined color="indigo" @click="goBack()">Atras</v-btn>
-
+        <div class="d-flex justify-center">
+          <v-btn class="ma-5" color="teal" min-width="200px" @click="goBack()">Atras</v-btn>
+        </div>
       </v-container>
-      {{this.data.cursos[0].unidad[0].porcent}}
+      {{this.data.cursos[1].unidad[0].porcent}}
     </v-content>
   </v-app>
 </template>
@@ -81,3 +90,14 @@ export default {
 };
 </script>
 
+<style scoped>
+.title {
+  width: 30%;
+}
+.border {
+  border-bottom: 2px dotted gray;
+  width: 80%;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+</style>

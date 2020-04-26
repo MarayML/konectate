@@ -13,7 +13,8 @@
       </v-card-title>
     </v-img>
     <v-progress-linear
-      color="light-blue"
+      background-color="white"
+      color="teal"
       buffer-value="100"
       height="25"
       :value="data.cursos[index].porcent"

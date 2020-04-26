@@ -1,23 +1,35 @@
 <template>
   <v-card class="mx-auto" max-width="400">
     <v-img class="white--text align-end" height="200px" :src="require(`@/assets/img/${img}`)">
-      <v-card-title class="black--text">{{autor}}</v-card-title>
+      <v-card-title class="black--text">
+          <div class="d-flex justify-center align-end white--text">
+          <v-img class="round" :src="require(`@/assets/img/${imga}`)"></v-img>
+          <h5 class="align-center ml-3 black--text">{{autor}}</h5>
+        </div>
+        </v-card-title>
     </v-img>
-    <v-progress-linear color="amber" height="25" reactive>{{porcent}}%</v-progress-linear>
-    <v-card-subtitle class="pb-0">{{title}}</v-card-subtitle>
+    <v-progress-linear
+      background-color="white"
+      color="teal"
+      buffer-value="100"
+      height="25"
+      :value="porcent"
+      striped
+    >Progress {{porcent}}%</v-progress-linear>
+    <v-card-subtitle class="pb-0 title black--text">{{title}}</v-card-subtitle>
     <v-card-subtitle class="pb-0">
       <div v-if="unidad">
-        <v-icon>fa fa-youtube"</v-icon>
-        {{time}} Minutos
+        <v-icon class="teal--text mr-2">fa fa-youtube-play</v-icon>
+        <b>{{time}} Minutos</b>
        </div>
       <div v-else>
-        <v-icon>fa fa-pencil-alt</v-icon>
-        {{time}} Test
+        <v-icon class="teal--text mr-2">fa fa-pencil</v-icon>
+        <b class="subtitle-1">{{time}} Minutos</b>
       </div>
       </div>
     </v-card-subtitle>
-   <v-card-actions>
-      <v-btn class="ma-2" outlined color="indigo"  @click="goVideo()">Continuar</v-btn>
+   <v-card-actions class="d-flex justify-center">
+      <v-btn :disabled = !status class="ma-1" outlined color="teal" min-width="150px" @click="goVideo()">Iniciar</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -35,6 +47,7 @@ export default {
     title: String,
     unidad: Boolean,
     time: Number,
+    status:Boolean,
     indexUnidad: Number,
     indexTest: Number
   },
@@ -47,3 +60,12 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.round {
+  border-radius: 50px;
+  border: 2px solid white;
+  width: 70px;
+  height: 70px;
+}
+</style>

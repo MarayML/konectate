@@ -1,9 +1,12 @@
 <template>
   <v-app>
-    <h2>{{title}}</h2>
-    <h6>{{totalTime}}</h6>
+    <h2 class="ml-2">{{title}}</h2>
+    <div class="d-flex ml-2">
+      <v-icon class="teal--text mr-2">fa fa-youtube-play</v-icon>
+      <h4 class="ml-2">{{totalTime}} Minutos</h4>
+    </div>
     <v-row>
-      <v-col cols="12" justify="center">
+      <v-col cols="12" class="d-flex justify-center">
         <iframe
           class="size"
           :src="src"
@@ -12,8 +15,10 @@
           allowfullscreen
         ></iframe>
       </v-col>
-      <v-btn class="ma-2" outlined color="sucess" @click="finish()">Terminar</v-btn>
     </v-row>
+    <div cols="12" class="d-flex justify-center">
+      <v-btn class="ma-5" outlined color="teal" min-width="200px" @click="finish()">Terminar</v-btn>
+    </div>
   </v-app>
 </template>
 
@@ -40,31 +45,29 @@ export default {
   methods: {
     finish() {
       clearInterval(this.counterInterval);
-     const array = this.data.cursos[this.indexCurso].unidad[this.indexUnidad]
-    //  if (((this.time >= (this.totalTime * 60) + 60)) && (this.time < (this.totalTime * 60) + 120)) {
+      const array = this.data.cursos[this.indexCurso].unidad[this.indexUnidad];
+      if (
+        this.time >= this.totalTime * 60 + 60 &&
+        this.time < this.totalTime * 60 + 120
+      ) {
         if (this.unidad) {
-          this.data.cursos[this.indexCurso].unidad[this.indexUnidad].porcent = 50;    
-          console.log('50'); 
-          console.log(this.data.cursos[this.indexCurso].unidad[this.indexUnidad].porcent);            
+          array.porcent = 50;
         } else {
-          array.test[this.indexTest].porcent = 50;          
+          array.test[this.indexTest].porcent = 50;
         }
-   /*   } else if ((this.time >= (this.totalTime * 60) + 120)) {
+      } else if (this.time >= this.totalTime * 60 + 120) {
         if (this.unidad) {
-          array.porcent = 100;    
-          console.log('100');   
-          console.log(array.porcent);            
-       } else {
-          array.test[this.indexTest].porcent = 100;          
+          array.porcent = 100;
+          array.status = false;
+        } else {
+          array.test[this.indexTest].porcent = 100;
+          array.test[this.indexTest].status = false;
         }
-     }*/
-      console.log(this.time);
+      }
       this.$router.push({ name: "Cursos" });
     }
   },
   created: function() {
-        console.log(this.data.cursos[0].imga);
-
     const array = this.data.cursos[this.indexCurso].unidad[this.indexUnidad];
     if (this.indexTest === -1) {
       this.unidad = true;

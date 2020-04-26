@@ -21,12 +21,14 @@
 import navBar from "../components/navBar";
 import card from "../components/card";
 import data from "../assets/data/data.json";
+import menu from "../components/menu";
 
 export default {
   name: "Konecta",
   components: {
     card,
-    navBar
+    navBar,
+    menu
   },
   data: () => {
     return {
