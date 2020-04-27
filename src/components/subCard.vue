@@ -15,7 +15,7 @@
       height="25"
       :value="porcent"
       striped
-    >Progress {{porcent}}%</v-progress-linear>
+    >Progreso {{porcent}}%</v-progress-linear>
     <v-card-subtitle class="pb-0 title black--text">{{title}}</v-card-subtitle>
     <v-card-subtitle class="pb-0">
       <div v-if="unidad">
@@ -29,7 +29,8 @@
       </div>
     </v-card-subtitle>
    <v-card-actions class="d-flex justify-center">
-      <v-btn :disabled = !status class="ma-1" outlined color="teal" min-width="150px" @click="goVideo()">Iniciar</v-btn>
+      <v-btn v-if="porcent === 0" :disabled = !status class="ma-1" outlined color="teal" min-width="150px" @click="goVideo()">Iniciar</v-btn>
+      <v-btn :disabled = !status outlined color="teal" class="mb-1" min-width="150px" @click="goVideo()" v-else>Continuar</v-btn>
     </v-card-actions>
   </v-card>
 </template>

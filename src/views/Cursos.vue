@@ -52,7 +52,6 @@
           <v-btn class="ma-5" color="teal" min-width="200px" @click="goBack()">Atras</v-btn>
         </div>
       </v-container>
-      {{this.data.cursos[1].unidad[0].porcent}}
     </v-content>
   </v-app>
 </template>
@@ -63,6 +62,7 @@ import data from "../assets/data/data.json";
 import navBar from "../components/navBar";
 import subCard from "../components/subCard";
 import unidad from "../components/unidad";
+
 
 export default {
   name: "Cursos",

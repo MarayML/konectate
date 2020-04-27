@@ -48,7 +48,7 @@
                     "id": 1,
                     "title":"PACIFICO SEGUROS I",
                     "video": "https://www.youtube.com/embed/9wgDlkvx6f4",
-                    "time": 30,
+                    "time": 2,
                     "porcent":0,
                     "status":true,
                     "test": [
@@ -74,7 +74,7 @@
                     "id": 2,
                     "title":"PACIFICO SEGUROS II",
                     "video": "https://www.youtube.com/embed/4LsrUg2xU5c",
-                    "time": 60,
+                    "time": 3,
                     "porcent":0,
                     "status":true,
                     "test": [

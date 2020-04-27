@@ -82,7 +82,7 @@ export default {
     }
     const self = this;
     this.counterInterval = setInterval(function() {
-      console.log(self.time++);
+      self.time++;
     }, 1000);
   },
   destroyed: function() {

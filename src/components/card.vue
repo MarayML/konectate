@@ -19,7 +19,7 @@
       height="25"
       :value="data.cursos[index].porcent"
       striped
-    >Progress {{data.cursos[index].porcent}}%</v-progress-linear>
+    >Progreso {{data.cursos[index].porcent}}%</v-progress-linear>
     <v-card-text>
       <unidad :index="index"></unidad>
     </v-card-text>
@@ -29,10 +29,10 @@
         class="mb-1"
         min-width="150px"
         color="teal"
-        v-if="data.cursos[index].status"
+        v-if="data.cursos[index].porcent === 0"
         @click="goCursos()"
       >Iniciar</v-btn>
-      <v-btn outlined color="teal" @click="goCursos()" v-else>Continuar</v-btn>
+      <v-btn outlined color="teal" class="mb-1" min-width="150px" @click="goCursos()" v-else>Continuar</v-btn>
     </v-card-actions>
   </v-card>
 </template>
